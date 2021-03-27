@@ -17,7 +17,6 @@ let response = window.confirm("Confirm that the shuttle is ready for takeoff.");
 if (response) {
     document.getElementById("flightStatus").innerHTML = "Shuttle in flight.";
     document.getElementById("shuttleBackground").style = "background-color: blue";
-    //add code to increase shuttle height by 10,000 miles
     document.getElementById("spaceShuttleHeight").innerHTML =+ 10000;
 }
 }
@@ -29,6 +28,20 @@ function clickLandingButton(){
     document.getElementById("shuttleBackground").style = "background-color: green";
     document.getElementById("spaceShuttleHeight").innerHTML = "0";
 }
+landingButton.addEventListener("click", clickLandingButton);
+
+function clickMissionAbortButton(){
+let response = window.confirm("Confirm that you want to abort the mission.");
+if (response){
+    document.getElementById("flightStatus").innerHTML = "Mission aborted.";
+    document.getElementById("shuttleBackground").style = "background-color: green";
+    document.getElementById("spaceShuttleHeight").innerHTML = 0;
+    //rocket.style.top = "250 px";
+}
+}
+missionAbortButton.addEventListener("click", clickMissionAbortButton);
+
+
 
 // Remember to pay attention to page loading!
 window.addEventListener("load", init);
