@@ -4,6 +4,7 @@ function init () {
     const takeoffButton = document.getElementById("takeoff");
     const landingButton = document.getElementById("landing");
     const missionAbortButton = document.getElementById("missionAbort");
+    const paragraph = document.getElementById("flightStatus");
     const upButton = document.getElementById("up");
     const downButton = document.getElementById("down");
     const leftButton = document.getElementById("left");
